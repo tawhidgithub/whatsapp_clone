@@ -9,5 +9,7 @@ export const images = {
   moreVr: require('@/assets/icons/More.png'),
   search: require('@/assets/icons/search.png'),
   tick: require('@/assets/icons/Tick.png'),
+  backArrow: require('@/assets/icons/ArrowBack.png'),
+  call_back: require('@/assets/icons/call_black.png'),
 
 };

@@ -1,7 +1,7 @@
-import { Image, Pressable, Text, View } from "react-native";
-import React from "react";
-import { Tabs } from "expo-router";
 import { images } from "@/constant/image";
+import { Tabs } from "expo-router";
+import React from "react";
+import { Image, Text, View } from "react-native";
 
 const TabIcon = ({
   focused,
@@ -69,13 +69,13 @@ const _layout = () => {
         }}
       />
       <Tabs.Screen
-        name="updates" // match the file: updates.tsx
+        name="status" // match the file: updates.tsx
         options={{
                     headerShown: false,
 
-          title: "Updates",
+          title: "Status",
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} icon={images.upgrade} title="Updates" />
+            <TabIcon focused={focused} icon={images.upgrade} title="Status" />
           ),
         }}
       />

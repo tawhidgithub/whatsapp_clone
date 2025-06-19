@@ -1,6 +1,7 @@
-import { View, Text, Image } from 'react-native'
-import React from 'react'
 import { images } from '@/constant/image'
+import { useRouter } from 'expo-router'
+import React from 'react'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 
 interface UserFieldProps{
 
@@ -14,7 +15,13 @@ isReadTheMessage:boolean
 }
 
 const UserField = ({name,imageUrl,isOnline,latestMessage,date,isReadTheMessage}:UserFieldProps) => {
+const routes= useRouter();
+
+
   return (
+<TouchableOpacity onPress={()=>routes.push("/userChatScreen")}>
+
+
 <View className='pl-5 pr-5 pt-3 pb-3 flex-row items-center bg-[#131923] border-b border-[#374149]' >
 {/* Image View */}
 <View>
@@ -46,6 +53,8 @@ const UserField = ({name,imageUrl,isOnline,latestMessage,date,isReadTheMessage}:
 
 
 </View>
+
+</TouchableOpacity>
   )
 }
 
